@@ -1,13 +1,13 @@
 # Project1
-# GitHub Users Analysis in Bangalore
+**1. How data is scrapped**
+   
+The data was collected using the below GitHub APIs 
+https://api.github.com/search/users  and https://api.github.com/users/
+https://api.github.com/users/{username}/repos 
+First did a search for users based in Bangalore with more than 100 followers. Then for each user, retrieved their details from the users' endpoint, ensuring to clean the company names by trimming whitespace, removing leading @ symbols, and converting them to uppercase. Subsequently, fetched up to 500 of their most recently pushed repositories.
 
-- The data was scraped using the GitHub API to collect user profiles and their repositories for developers located in Bangalore with over 100 followers.
-- One surprising finding was that hireable users tend to have a significantly higher number of followers compared to non-hireable users, suggesting a correlation between visibility and job readiness.
-- It is recommended that developers actively engage with their GitHub communities by creating projects and wikis, as these activities may enhance their visibility and attract more followers.
+## 2. The most interesting and surprising fact 
+Highly-followed users favor JavaScript, TypeScript, and MIT licenses. Surprisingly, there's a weak link between followers and stars (correlation: 0.024), indicating minimal influence. The cc0-1.0 license leads with the highest average stars (374.7), likely due to standout repositories like "Hack-with-Github/Awesome-Hacking."
 
-## Project Overview
-This project aims to analyze GitHub users in Bangalore, focusing on various metrics such as followers, repositories, and user engagement. We collected data using the GitHub API and performed detailed analysis to uncover trends and insights that can benefit developers in their networking and career growth.
-
-## Data Sources
-- Users data obtained from GitHub API
-- Repositories data linked to the users
+## 3. An actionable recommendation
+Developers aiming for visibility should prioritize using popular languages (e.g., JavaScript, TypeScript) and the MIT or Apache-2.0 licenses, which are widely adopted by successful users. Focus on creating high-value repositories, as star ratings are driven more by project quality and relevance than follower count
